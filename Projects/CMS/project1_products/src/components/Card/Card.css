@@ -1,0 +1,81 @@
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 600px;
+  overflow-y: hidden;
+  animation: zoomIn 1s ease forwards;
+}
+
+.card:hover {
+  scale: 1.05;
+  transition: all 0.5s;
+  /*
+  * Light glow on box shadow for hover effect 
+  */
+
+  box-shadow: 0 0 10px #ccc, 0 0 20px #ccc, 0 0 30px #ccc;
+}
+.card-img-top {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 0.8em;
+  margin: 0;
+  height: 60px;
+}
+
+.card-text {
+  font-size: 0.6em;
+  color: #555;
+  margin: 0;
+  height: 50px;
+}
+
+.card-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  /* Attractive color for price */
+  color: #ff6f61;
+  margin-top: 10px;
+}
+
+.add-to-cart {
+  border: none;
+  background: inherit;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.card:hover .add-to-cart {
+  visibility: visible;
+  fill: white;
+}
+
+.svg {
+  fill: white;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}

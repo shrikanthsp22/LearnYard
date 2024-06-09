@@ -1,0 +1,32 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: inherit;
+  color: #fff;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.nav ul li {
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav ul li:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de,
+    0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}

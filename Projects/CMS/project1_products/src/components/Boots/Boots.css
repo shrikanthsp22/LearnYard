@@ -1,0 +1,6 @@
+.container {
+  /* 
+    Set the height to the remaining height after Header taking 10Vh */
+  height: calc(100vh - 10vh);
+  background-color: #282c34;
+}
