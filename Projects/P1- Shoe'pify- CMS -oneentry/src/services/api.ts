@@ -4,8 +4,11 @@ import { IPagesEntity } from "oneentry/dist/pages/pagesInterfaces";
 import { IMenusEntity } from "oneentry/dist/menus/menusInterfaces";
 import { IProductsEntity } from "oneentry/dist/products/productsInterfaces";
 
+const token =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2hvZXBpZnkiLCJzZXJpYWxOdW1iZXIiOjEsImlhdCI6MTcxNzY1MjI2NCwiZXhwIjoxNzQ5MTg4MTk0fQ._OkcZNcD6F8odYgMi60eJ76W4vFhNIq56pzxSymWRmE";
+
 const { Pages, Products, Menus } = defineOneEntry(configurations.baseUrl, {
-  token: process.env.REACT_APP_ONE_ENTRY_TOKEN,
+  token: token,
 });
 
 /**

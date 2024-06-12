@@ -10,17 +10,16 @@ import { IMenusPages } from "oneentry/dist/menus/menusInterfaces";
 import { UseFetchProducts } from "../../common/hooks/UseFetchProducts";
 
 function App() {
-  // void getPages();
   const [isTop, setIsTop] = useState(false);
   const [isLayoutRendered, setLayoutRendered] = useState(false);
+
   const { menus } = useFetchMenus();
   const { products } = UseFetchProducts();
 
   useEffect(() => {
     const timer = moveToTop();
     const finalLayoutTimer = renderFinalLayout();
-    console.log("Menus-->", menus);
-    console.log("products-->", products);
+
     return () => {
       clearTimeout(timer);
       clearTimeout(finalLayoutTimer);
@@ -46,10 +45,10 @@ function App() {
   return (
     <div className="app">
       <header
-        className={`app-header ${isLayoutRendered ? "app-height-10vh" : ""}`}
+        className={`app-header ${
+          isLayoutRendered ? "app-header-minimized" : ""
+        }`}
       >
-        {/* On clilc of h2 redirect to home */}
-
         <h2 className={`title ${isTop ? "top" : ""}`}>Shoe'pify</h2>
         {isLayoutRendered && (
           <div className={`nav-container ${isLayoutRendered ? "visible" : ""}`}>
