@@ -50,12 +50,14 @@ function App() {
         }`}
       >
         <h2 className={`title ${isTop ? "top" : ""}`}>Shoe'pify</h2>
+
         {isLayoutRendered && (
           <div className={`nav-container ${isLayoutRendered ? "visible" : ""}`}>
             <Nav data={menus?.pages as IMenusPages[]} />
           </div>
         )}
       </header>
+
       {isLayoutRendered && (
         <div className="app-content">
           <Routes>
